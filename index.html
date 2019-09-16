@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SoftServe DEMO-1</title>
+  <link href="style/style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="image/favicon.png" />
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+<div class="content">
+  <ul class="menu">
+    <li>
+      <input type="radio" id="menu-item1" name="select-menu" checked />
+      <label for="menu-item1"><span>Task 1</span></label>
+      <div id="content-item1">
+        <h1>Checker board</h1>
+        <p>Print the Checker board with specified parameters.</p>
+        <p>Please enter numbers of columns and rows and the symbol.</p>
+        <form>
+          <div class="flex-between">
+            <label>Columns: <input required type="text" id="task1-column" placeholder="Number of column" /></label>
+            <label>Rows: <input required type="text" id="task1-row" placeholder="Number of row" /></label>
+            <label>Symbol: <input required type="text" id="task1-symbol" placeholder="Symbol" /></label>
+          </div>
+          <textarea id="task1-output"></textarea>
+          <div class="flex-end">
+            <input type="submit" id="task1-run" class="button"  value="Print"/>
+          </div>
+        </form>
+      </div>
+    </li>
+
+    <li>
+      <input type="radio" id="menu-item2" name="select-menu" />
+      <label for="menu-item2"><span>Task 2</span></label>
+      <div id="content-item2">
+        <h1>The envelopes analysis</h1>
+        <div class="keep-out"></div>
+      </div>
+    </li>
+
+    <li>
+      <input type="radio" id="menu-item3" name="select-menu" />
+      <label for="menu-item3"><span>Task 3</span></label>
+      <div id="content-item3">
+        <h1>Let's sort the triangles</h1>
+        <p>Please enter vertices (a three-character string) and length of the sides from 2 to 10 triangles.</p>
+        <p>Triangles will be sorted in descending order by square. </p>
+        <form>
+          <div id="task3-triangle0" class="flex-between task3-input">
+            <label>Vertices: <input required type="text" class="task3-vertices" placeholder="Vertices" pattern=".{3,}"/></label>
+            <label>Side 1: <input required type="text" class="task3-side1" placeholder="Side 1" /></label>
+            <label>Side 2: <input required type="text" class="task3-side2" placeholder="Side 2" /></label>
+            <label>Side 3: <input required type="text" class="task3-side3" placeholder="Side 3" /></label>
+          </div>
+          <div id="task3-triangle1" class="flex-between task3-input">
+            <label>Vertices: <input required type="text" class="task3-vertices" placeholder="Vertices" pattern=".{3,}"/></label>
+            <label>Side 1: <input required type="text" class="task3-side1" placeholder="Side 1" /></label>
+            <label>Side 2: <input required type="text" class="task3-side2" placeholder="Side 2" /></label>
+            <label>Side 3: <input required type="text" class="task3-side3" placeholder="Side 3" /></label>
+          </div>
+          <textarea id="task3-output"></textarea>
+          <div class="flex-between">
+            <input type="button" id="task3-add" class="button"  value="Add one"/>
+            <input type="submit" id="task3-run" class="button"  value="Sort"/>
+          </div>
+        </form>
+      </div>
+    </li>
+
+    <li>
+      <input type="radio" id="menu-item4" name="select-menu" />
+      <label for="menu-item4"><span>Task 4</span></label>
+      <div id="content-item4">
+        <h1>Get the longest palindrome.</h1>
+        <p>Please enter the integer number as a string.</p>
+        <p>The result will be the longest palindrome or 0, if result isn't found. </p>
+        <form>
+          <div>
+            <label>Number: <input required type="text" id="task4-input" placeholder="Number" /></label>
+          </div>
+          <div>
+            <label>The longest palindrome: <input type="text" id="task4-output" readonly="true"/></label>
+          </div>
+          <div class="flex-end">
+            <input type="submit" id="task4-run" class="button"  value="Search"/>
+          </div>
+        </form>
+      </div>
+    </li>
+
+    <li>
+      <input type="radio" id="menu-item5" name="select-menu" />
+      <label for="menu-item5"><span>Task 5</span></label>
+      <div id="content-item5">
+        <h1>count the lucky tickets</h1>
+        <p>Please enter the start and the end numbers of your tickets (six digits).</p>
+        <p>There are two methods to find lucky tickets: simple (as the semi-sum of number of ticket) and complex (as the sum of odd and even digits). </p>
+        <form>
+          <div>
+            <label>Start number: <input required type="text" id="task5-start" placeholder="Start number" /></label>
+          </div>
+          <div>
+            <label>End number: <input required type="text" id="task5-end" placeholder="End number" /></label>
+          </div>
+          <textarea id="task5-output"></textarea>
+          <div class="flex-end">
+            <input type="submit" id="task5-run" class="button" value="Count"/>
+          </div>
+        </form>
+      </div>
+    </li>
+
+    <li>
+      <input type="radio" id="menu-item6" name="select-menu" />
+      <label for="menu-item6"><span>Task 6</span></label>
+      <div id="content-item6">
+        <h1>Numbers Sequence</h1>
+        <p>Please enter the first square and the length of sequence.</p>
+        <p>Print the sequence contains the sequence of numbers with given length, the square of which isn't less than given square.</p>
+        <form>
+          <div>
+            <label>Length: <input required type="text" id="task6-length" placeholder="The length of sequence" /></label>
+          </div>
+          <div>
+            <label>First square: <input required type="text" id="task6-square" placeholder="The first square of sequence" /></label>
+          </div>
+          <textarea id="task6-output"></textarea>
+          <div class="flex-end">
+            <input type="submit" id="task6-run" class="button" value="Get"/>
+          </div>
+        </form>
+      </div>
+    </li>
+
+    <li>
+      <input type="radio" id="menu-item7" name="select-menu" />
+      <label for="menu-item7"><span>Task 7</span></label>
+      <div id="content-item7">
+        <h1>Fibonacci numbers</h1>
+        <p>Please enter the minimum and maximum of numbers from Fibonacci sequence or the length of numbers.</p>
+        <form>
+          <div>
+            <label>Start number: <input required type="text" id="task7-start" placeholder="Start number" /></label>
+          </div>
+          <div>
+            <label>End number: <input required type="text" id="task7-end" placeholder="End number" /></label>
+          </div>
+          <div class="flex-end">
+            <input type="submit" id="task7-run-min" class="button" value="Go"/>
+          </div>
+        </form>
+        <form>
+          <div>
+            <label><strong>OR</strong></label>
+          </div>
+          <div>
+            <label>Length: <input required type="text" id="task7-length" placeholder="Length of number" /></label>
+          </div>
+          <div class="flex-end">
+            <input type="submit" id="task7-run-length" class="button" value="Go"/>
+          </div>
+          <textarea id="task7-output"></textarea>
+      </div>
+    </li>
+  </ul>
+</div>
+<div><a href="test.html" class="go-tests">GO TO TESTS! <div class="fake-arrow-right">V</div></a></div>
+<div class="title">DEMO1</div>
+<div id="error" class="error">
+  <div id="error-caption"><span>Failure</span></div>
+  <div id="error-message"><span>The property 'symbol' have to be a single character string. Please enter valid symbol.</span></div>
+  <div id="error-close"><span>✖</span></div>
+</div>
+</body>
+</html>

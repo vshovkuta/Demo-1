@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "PunkKid";
+  src: url("../font/PunkKid.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto.woff2") format("woff2");
+}
+
+:root {
+  --primary-light: #71c174;
+  --primary-color: #8bc34a;
+  --primary-dark: #689f38;
+  --secondary-ligth: #d3d3d3;
+  --secondary-color: #808080;
+  --secondary-dark: #a9a9a9;
+  --error-color: #C55953;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url('../image/background-light.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+* {
+  font-family: Roboto;
+}
+
+#mocha-report > .suite > h1 > a {
+  font-family: PunkKid;
+  text-decoration: none;
+}
+
+.go-tasks {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  font-size: 20pt;
+  text-decoration: none;
+  color: black;
+}
+
+.go-tasks:hover {
+  filter: drop-shadow(0px 5px 2px gray);
+}
+
+.title, .go-tasks {
+  font-family: PunkKid;
+  letter-spacing: 3px;
+}
+
+#mocha {
+  display: block;
+  padding: 15px 15px;
+  border: 5px solid var(--secondary-color);
+  box-sizing: border-box;
+  opacity: 1;
+  transform: scaleY(1);
+  transition: transform 0.2s, opacity 0.5s;
+  transform-origin: top left;
+  background-color: #ffffffbf;
+  z-index: 2;
+  margin: 50px;
+}
+
+.title {
+  position: fixed;
+  opacity: 1;
+  z-index: -1;
+  font-size: 150px;
+  letter-spacing: 30px;
+  user-select: none;
+  bottom: 0;
+  left: 30px;
+}
+
+#mocha .suite .suite h1 {
+  font-size: 1.2em;
+}
+
+#mocha .test.pass::before {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+#mocha  h1 {
+  font-size: 1.5em;
+}
+
+#mocha h2 {
+  font-size: 16px;
+}
+
+#mocha .test pre {
+  font: 16px/1.5 monaco, monospace;
+  background-color: var(--secondary-ligth);
+  border: none;
+  box-shadow: none;
+}
+.string {
+  white-space: normal;
+}
+
+.fake-arrow-left {
+  font-family: PunkKid;
+  transform: rotateZ(90deg);
+  display: inline-block;
+}
