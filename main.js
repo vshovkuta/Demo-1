@@ -37,11 +37,6 @@ document.getElementById('error-close').onclick = () => {
   document.getElementById('error').classList.remove('show');
 }
 
-document.getElementById('task3-add').onclick = () => {
-
-}
-
-
 // Task 1
 document.getElementById('task1-run').onclick = () => {
   let result = printCheckerboard(
@@ -57,13 +52,13 @@ document.getElementById('task1-run').onclick = () => {
 document.getElementById('task3-run').onclick = () => {
   let arrayOfObject = [];
   let result;
-  let collectionOfTriangles = [...document.getElementsByClassName('task3-input')];
+  let arrayOfTriangles = [...document.getElementsByClassName('task3-input')];
 
-  if (collectionOfTriangles.every ((item) => {
+  if (arrayOfTriangles.every ((item) => {
     return item.getElementsByClassName('task3-vertices')[0].value.length === 3;
   })) {
 
-    collectionOfTriangles.forEach((item) => {
+    arrayOfTriangles.forEach((item) => {
       let triangleObject = {};
 
       triangleObject.vertices = item.getElementsByClassName('task3-vertices')[0].value;
@@ -76,28 +71,26 @@ document.getElementById('task3-run').onclick = () => {
 
     showResult(result, 'task3-output');
   }
-
-
 }
 
 document.getElementById('task3-add').onclick = () => {
-  let collectionOfTriangles = [...document.getElementsByClassName('task3-input')];
+  let arrayOfTriangles = [...document.getElementsByClassName('task3-input')];
 
-  if (collectionOfTriangles.length >= 10) {
+  if (arrayOfTriangles.length >= 10) {
     showError({status: 'failure', reason: 'You have already added the max number of triangles'});
     return;
   }
 
-  let newTriangle = collectionOfTriangles[0].cloneNode(true);
+  let newTriangle = arrayOfTriangles[0].cloneNode(true);
 
   Array.prototype.forEach.call(newTriangle.getElementsByTagName('input'), (item) => item.value = '');
 
   let closeLabel = document.createElement('label');
-      closeLabel.innerText = '✖';
+      closeLabel.append(document.createTextNode('✖'));
       closeLabel.setAttribute('onclick', 'this.parentNode.remove()');
       closeLabel.setAttribute('class', 'delete-button');
   newTriangle.append(closeLabel);
-  collectionOfTriangles[collectionOfTriangles.length - 1].after(newTriangle);
+  arrayOfTriangles[arrayOfTriangles.length - 1].after(newTriangle);
 }
 
 // Task 4
