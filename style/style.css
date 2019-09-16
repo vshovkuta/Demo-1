@@ -237,7 +237,7 @@ textarea:focus {
   border: 2px solid var(--error-color);
   opacity: 0;
   transition: 1s;
-  transform: translateY(1000px);
+  transform: translateY(250px);
   z-index: 99;
 }
 
