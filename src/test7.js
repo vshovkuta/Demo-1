@@ -105,19 +105,19 @@ export const test7 = function testGetFibonacci() {
       });
 
       describe('Correct ways to use', () => {
-        it('getFibonacci({ min: 5, max: 5 })', () => {
+        it('getFibonacci({ min: 5, max: 5 }) → OK', () => {
           assert.deepEqual(getFibonacci({ min: 5, max: 5 }),
             [5]
           );
         });
 
-        it('getFibonacci({ min: 5, max: 120 })', () => {
+        it('getFibonacci({ min: 5, max: 120 }) → OK', () => {
           assert.deepEqual(getFibonacci({ min: 5, max: 120 }),
             [5, 8, 13, 21, 34, 55, 89]
           );
         });
 
-        it('getFibonacci({ min: 5, max: 1,000,000,000,000 })', () => {
+        it('getFibonacci({ min: 5, max: 1,000,000,000,000 }) → OK', () => {
           assert.deepEqual(getFibonacci({ min: 5, max: 1000000000000 }),
             [
               5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987,
@@ -133,7 +133,7 @@ export const test7 = function testGetFibonacci() {
             ]);
         });
 
-        it('getFibonacci({ min: 5, max: 2**53 - 1 })', () => {
+        it('getFibonacci({ min: 5, max: 2**53 - 1 }) → OK', () => {
           assert.deepEqual(getFibonacci({min: 5, max: 2**53 - 1}),
             [
               5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987,
@@ -156,12 +156,12 @@ export const test7 = function testGetFibonacci() {
             ]);
         });
 
-        it('getFibonacci({ length: 2 })', () => {
+        it('getFibonacci({ length: 2 }) → OK', () => {
           assert.deepEqual(getFibonacci({length: 2}),
             [13, 21, 34, 55, 89]);
         });
 
-        it('getFibonacci({ length: 10 })', () => {
+        it('getFibonacci({ length: 10 }) → OK', () => {
           assert.deepEqual(getFibonacci({ length: 10 }),
             [1134903170, 1836311903, 2971215073, 4807526976, 7778742049]);
         });
