@@ -37,6 +37,10 @@ document.getElementById('error-close').onclick = () => {
   document.getElementById('error').classList.remove('show');
 }
 
+const reportValidity = function formReportValidity(formId) {
+	 return document.getElementById(formId).reportValidity();
+}
+
 // Task 1
 document.getElementById('task1-run').onclick = () => {
   let result = printCheckerboard(
