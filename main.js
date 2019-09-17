@@ -107,7 +107,7 @@ document.getElementById('task3-add').onclick = () => {
 
 // Task 4
 document.getElementById('task4-run').onclick = () => {
-	if (!reportValidity('task4-form')) {
+  if (!reportValidity('task4-form')) {
     return;
   }
 	
@@ -118,7 +118,7 @@ document.getElementById('task4-run').onclick = () => {
 
 // Task 5
 document.getElementById('task5-run').onclick = () => {
-	if (!reportValidity('task5-form')) {
+  if (!reportValidity('task5-form')) {
     return;
   }
 	
@@ -132,7 +132,7 @@ document.getElementById('task5-run').onclick = () => {
 
 //Task 6
 document.getElementById('task6-run').onclick = () => {
-	if (!reportValidity('task6-form')) {
+  if (!reportValidity('task6-form')) {
     return;
   }
   
@@ -146,7 +146,7 @@ document.getElementById('task6-run').onclick = () => {
 
 // Task7
 document.getElementById('task7-run-min').onclick = () => {
-	if (!reportValidity('task7-form1')) {
+  if (!reportValidity('task7-form1')) {
     return;
   }
 	
@@ -159,7 +159,7 @@ document.getElementById('task7-run-min').onclick = () => {
 }
 
 document.getElementById('task7-run-length').onclick = () => {
-	if (!reportValidity('task7-form2')) {
+  if (!reportValidity('task7-form2')) {
     return;
   }
 	
