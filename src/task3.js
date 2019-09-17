@@ -63,9 +63,9 @@ export const triangleSort = function getArrayOfSortedTrianglesVertices(arrayOfOb
       }
 
       if (
-        object[triangleVertices[0]] > object[triangleVertices[1]] + object[triangleVertices[2]]
-        && object[triangleVertices[1]] > object[triangleVertices[0]] + object[triangleVertices[2]]
-        && object[triangleVertices[2]] > object[triangleVertices[0]] + object[triangleVertices[1]]
+        object[triangleVertices[0]] >= object[triangleVertices[1]] + object[triangleVertices[2]]
+        || object[triangleVertices[1]] >= object[triangleVertices[0]] + object[triangleVertices[2]]
+        || object[triangleVertices[2]] >= object[triangleVertices[0]] + object[triangleVertices[1]]
      ) {
         throw {
           status: 'failure',
