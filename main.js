@@ -38,11 +38,15 @@ document.getElementById('error-close').onclick = () => {
 }
 
 const reportValidity = function formReportValidity(formId) {
-	 return document.getElementById(formId).reportValidity();
+  return document.getElementById(formId).reportValidity();
 }
 
 // Task 1
 document.getElementById('task1-run').onclick = () => {
+  if (!reportValidity('task1-form')) {
+    return;
+  }
+	
   let result = printCheckerboard(
     parseInt(document.getElementById('task1-column').value, 10),
     parseInt(document.getElementById('task1-row').value, 10),
@@ -54,6 +58,10 @@ document.getElementById('task1-run').onclick = () => {
 
 // Task 3
 document.getElementById('task3-run').onclick = () => {
+  if (!reportValidity('task3-form')) {
+    return;
+  }
+	
   let arrayOfObject = [];
   let result;
   let arrayOfTriangles = [...document.getElementsByClassName('task3-input')];
@@ -99,6 +107,10 @@ document.getElementById('task3-add').onclick = () => {
 
 // Task 4
 document.getElementById('task4-run').onclick = () => {
+	if (!reportValidity('task4-form')) {
+    return;
+  }
+	
   let result = getLongestPalindrome(document.getElementById('task4-input').value);
 
   showResult(result, 'task4-output');
@@ -106,6 +118,10 @@ document.getElementById('task4-run').onclick = () => {
 
 // Task 5
 document.getElementById('task5-run').onclick = () => {
+	if (!reportValidity('task5-form')) {
+    return;
+  }
+	
   let result = countLuckyTickets({
     min: parseInt(document.getElementById('task5-start').value, 10),
     max: parseInt(document.getElementById('task5-end').value, 10),
@@ -116,6 +132,10 @@ document.getElementById('task5-run').onclick = () => {
 
 //Task 6
 document.getElementById('task6-run').onclick = () => {
+	if (!reportValidity('task6-form')) {
+    return;
+  }
+  
   let result = getNumberSequence(
     parseInt(document.getElementById('task6-length').value, 10),
     parseInt(document.getElementById('task6-square').value, 10)
@@ -126,6 +146,10 @@ document.getElementById('task6-run').onclick = () => {
 
 // Task7
 document.getElementById('task7-run-min').onclick = () => {
+	if (!reportValidity('task7-form1')) {
+    return;
+  }
+	
   let result = getFibonacci({
     min: parseInt(document.getElementById('task7-start').value, 10),
     max: parseInt(document.getElementById('task7-end').value, 10),
@@ -135,6 +159,10 @@ document.getElementById('task7-run-min').onclick = () => {
 }
 
 document.getElementById('task7-run-length').onclick = () => {
+	if (!reportValidity('task7-form2')) {
+    return;
+  }
+	
   let result = getFibonacci({
     length: parseInt(document.getElementById('task7-length').value, 10),
   });
